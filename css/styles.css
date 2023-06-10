@@ -1,0 +1,225 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  /*  */
+
+
+    @font-face {
+        font-family: 'HKGrotesk-Regular';
+        src: url('/fonts/HKGrotesk-Regular.otf');
+    }
+
+    @font-face {
+        font-family: 'HKGrotesk-ExtraBold';
+        src: url('/fonts/HKGrotesk-ExtraBold.otf');
+    }
+
+
+
+
+
+
+    :root {
+        --primary-color : #333;
+        --second-color: #fff;
+        --tri-color: #e4e4e4;
+
+        --default-ff:  Arial, Helvetica, sans-serif;
+        --regular-ff: 'HKGrotesk-Regular', Arial, sans-serif;
+        --bold-ff: 'HKGrotesk-ExtraBold', Arial, sans-serif;
+
+
+        --fs-normal: 1em;
+        --fs-heading: 2em;
+        
+    }
+
+
+
+
+
+
+  
+    html {
+        background-color: var(--tri-color);
+    }
+
+
+    body {
+        max-width: 100%;
+        margin: 0 10%;
+        
+        line-height: 1.5;
+
+        font-size: var(--fs-normal);
+        font-family: var(--regular-ff);
+        background-color: var(--second-color);
+        color: var(--primary-color);
+    }
+
+    .header-container {
+        position: relative;
+        display: grid;
+        grid-template-rows: auto auto; /* two rows, size according to content */
+        grid-template-columns: 100%; 
+        align-items: center;
+        justify-items: center; /* center items */
+        text-align: center; /* center text */
+        gap: 10px; /* optional: space between grid items */
+        border-bottom: 1px solid #333;
+        padding: 2em 0;
+    }
+    
+    .header-logo-container {
+        position: relative;
+        grid-column: 1 / span 2; /* occupies the both columns */
+        grid-row: 1; /* occupies the first row */
+      
+    }
+    
+    .header-nav-container {
+        position: relative;
+        grid-column: 1; /* occupies the first column */
+        grid-row: 2; /* occupies the second row */
+        justify-items: start;
+       
+    }
+    
+    .header-nav-item, .header-search, .header-theme {
+        display: inline-block; /* line up horizontally */
+        margin: 0 1em; /* space between items */
+    }
+
+    .header-nav-item a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .header-nav-item.active {
+        text-decoration: none;
+        font-family: var(--bold-ff);
+    }
+
+    .header-logo {
+        font-size: 3em;   
+        font-family: var(--bold-ff);
+    }
+
+    .header-search {
+        border: 1px solid var(--primary-color);
+        width: 12em;
+        text-align:left;
+        padding: 1px 10px;
+        border-radius: 20px;
+    }
+
+    
+    .hero-container {
+       
+        width: auto;
+        height: auto;
+    }
+
+    .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* two columns: large one on left, small one on right */
+        grid-template-rows: 1fr 1fr; /* two rows: for two small images */
+        gap: 30px;
+        padding: 3% 15% 3% 15%;
+    }
+    
+    .hero-featured {
+        position: relative;
+        grid-row: span 2; /* featured image spans two rows */
+    }
+    
+    .hero-small {
+        position: relative;
+        /* no need to specify grid-row, as it defaults to occupying one row */
+    }
+    
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5); /* semi-transparent black */
+        color: var(--second-color);
+        padding: 10px 30px;
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .hero-featured img, .hero-small img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        
+    }
+
+    .hero-featured .text-overlay h2, .hero-small .text-overlay h3 {
+        font-family: var(--bold-ff);
+        margin: 0;
+        max-width: 66%;
+        text-align: left;
+    }
+
+    .hero-featured .text-overlay p, .hero-small .text-overlay p {
+        position: absolute;
+        right: 5%;
+        bottom: 12.5%;
+        font-family: var(--default-ff);
+        font-size: 1rem;
+    }
+
+    .lottie-scroll-container {
+        color: var(--primary-color);
+        width: 100%;
+        height: 100px; 
+    }
+
+
+
+    
