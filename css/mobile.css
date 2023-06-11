@@ -193,3 +193,142 @@
     }
 
 }
+
+
+@media screen and (max-width: 767px) {
+
+
+
+ 
+    body {
+        margin: 0; 
+    }
+
+     /* header and hero */
+
+     .header-logo {
+        font-size: 1.1rem;
+    } 
+
+    .header-nav-container {
+        margin: 0 5%;
+        
+    }
+
+    .header-nav-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero {
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .text-overlay {
+        padding: 0 .5rem;
+        width: 100%;
+    }
+
+    .text-overlay h2 {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay h3 {
+        max-width: 75%;
+    }
+
+    .text-overlay h3 {
+        font-size: .9rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay p {
+        font-size: .7rem;
+    }
+
+    
+    /* marquee */
+
+    .marquee {
+        font-size: 6rem;
+    }
+
+    /* article section */
+
+    .articles-container {
+        padding: 0;
+    }
+
+    .article-items {
+        
+        padding: 2rem 0;
+       
+    }
+
+    .article-item {
+        width: 100%;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .article-content {
+        padding: .5rem 1rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.25rem;
+    }
+
+    #load-more {
+        font-size: 2rem;
+    }
+
+    /* footer */
+
+    .footer-content-container {
+        max-width: 100%;
+        padding: .5rem;
+    }
+
+
+    .newsletter-container {
+        padding: 0.5rem;
+        display: block;
+    }
+
+    .newsletter-content {
+        border: none;
+        margin: auto;
+        padding: 0.5rem;
+    }
+
+    .newsletter-content h2 {
+   
+        font-size: 1.2rem;
+    }
+
+    .newsletter-content input[type="email"] {
+        padding: 0;
+    }
+
+    .newsletter-content button {
+        padding: .2rem .25rem;
+        font-size: .8rem;
+    }
+
+    .newsletter-disclaimer p {
+        font-size: .6rem;
+    }
+
+    .footer-link-items {
+        gap: 2rem;
+    }
+
+    
+
+    
+}
