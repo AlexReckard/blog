@@ -59,9 +59,10 @@
 
 
     :root {
-        --primary-color : #333;
+        --primary-color : #222;
         --second-color: #fff;
         --tri-color: #e4e4e4;
+        --dark-tri-color: #292929;
 
         --default-ff:  Arial, Helvetica, sans-serif;
         --regular-ff: 'HKGrotesk-Regular', Arial, sans-serif;
@@ -98,6 +99,25 @@
         color: var(--primary-color);
     }
 
+
+    /* dark-mode */
+
+    html.dark-mode {
+        background-color: var(--dark-tri-color);
+        
+    }
+
+
+    body.dark-mode {
+        background-color: var(--primary-color);
+        color: var(--second-color);
+    }
+
+
+    /* header */
+
+
+
     .header-container {
         position: relative;
         display: grid;
@@ -107,8 +127,12 @@
         justify-items: center; /* center items */
         text-align: center; /* center text */
         gap: 10px; /* optional: space between grid items */
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid var(--primary-color);
         padding: 2em 0;
+    }
+
+    .dark-mode .header-container {
+        border-bottom: 1px solid var(--second-color);
     }
     
     .header-logo-container {
@@ -131,6 +155,23 @@
         margin: 0 1em; /* space between items */
     }
 
+    .header-logo {
+        font-size: 3em;   
+        font-family: var(--bold-ff);
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+
+
+    .dark-mode .header-logo {
+        color: var(--second-color);
+    }
+
+
+
+
+
     .header-nav-item a {
         text-decoration: none;
         color: var(--primary-color);
@@ -141,12 +182,11 @@
         font-family: var(--bold-ff);
     }
 
-    .header-logo {
-        font-size: 3em;   
-        font-family: var(--bold-ff);
-        color: var(--primary-color);
-        text-decoration: none;
+
+    .dark-mode .header-nav-item a {
+        color: var(--second-color);
     }
+
 
     .header-search button {
         border: 1px solid var(--primary-color);
@@ -155,11 +195,24 @@
         padding: 1px 10px;
         border-radius: 20px;
         background-color: var(--second-color);
+        cursor: text;
+    }
+
+    .dark-mode .header-search button {
+        border: 1px solid var(--second-color);
+        background-color: var(--primary-color);
+        color: var(--second-color);
     }
 
     .header-theme button {
         border: none;
         background-color: var(--second-color);
+        cursor: pointer;
+    }
+
+    .dark-mode .header-theme button  {
+        background-color: transparent;
+        color: var(--second-color);
     }
 
     
@@ -198,6 +251,7 @@
         padding: 10px 30px;
         width: auto;
         border-radius: 0 0 20px 20px;
+        cursor: pointer;
     }
     
     .hero-featured img, .hero-small img {
@@ -205,7 +259,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        
+        cursor: pointer;
     }
 
     .hero-featured .text-overlay h2, .hero-small .text-overlay h3 {
@@ -233,6 +287,12 @@
         width: 100%;
         height: 75px; 
     }
+
+    .dark-mode .lottie-scroll-container {
+       
+        filter: invert();
+    }
+
 
 
 
@@ -285,8 +345,16 @@
       padding: 4em 0;
     }
 
+    .dark-mode .article-items {
+        border-bottom: 1px solid var(--second-color);
+    }
+
     .article-items:first-child {
         border-top: 1px solid var(--primary-color);
+    }
+
+    .dark-mode .article-items:first-child {
+        border-top: 1px solid var(--second-color);
     }
 
     .article-item {
@@ -315,6 +383,10 @@
         border: 1px solid var(--primary-color);
     }
 
+    .dark-mode .article-content {
+        border: 1px solid var(--second-color);
+    }
+
     .article-content h4 a, 
     .article-content .read-date{
         color: grey;
@@ -337,6 +409,10 @@
         padding-left: .5rem;
         font-family: var(--bold-ff);
     }
+
+    .dark-mode .article-content .read-article a {
+        color: var(--second-color);
+    } 
 
    
     .article-content .read-date {
@@ -362,6 +438,10 @@
         outline: none;
         cursor: pointer;
         text-decoration: underline;
+    }
+
+    .dark-mode #load-more {
+        color: var(--second-color);
     }
     
 
@@ -450,6 +530,7 @@ footer {
     font-size: 1.25rem;
     font-family: var(--bold-ff);
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 .footer-links-container,
