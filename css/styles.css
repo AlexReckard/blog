@@ -174,7 +174,7 @@
         grid-template-columns: 2fr 1fr; /* two columns: large one on left, small one on right */
         grid-template-rows: 1fr 1fr; /* two rows: for two small images */
         gap: 30px;
-        padding: 5% 15% 5% 15%;
+        padding: 5% 12.5%;
     }
     
     .hero-featured {
