@@ -80,6 +80,7 @@
 
   
     html {
+        max-width: 100%;
         background-color: var(--tri-color);
     }
 
@@ -252,7 +253,7 @@
         background-color: rgba(0,0,0,0.5); /* semi-transparent black */
         color: var(--second-color);
         padding: 10px 30px;
-        width: auto;
+        width: 100%;
         border-radius: 0 0 20px 20px;
         cursor: pointer;
     }
