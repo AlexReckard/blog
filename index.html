@@ -12,15 +12,12 @@
 
     <header>
         <div class="header-container">
-            <!-- Logo -->
             <div class="header-logo-container">
-                <div class="header-logo">
+                <a href="#" class="header-logo">
                     <h1>FOR THE RECKARD.</h1>
-                </div>
+                </a>
             </div>
-    
-            <!-- Navigation Items -->
-            <div class="header-nav-container">
+            <nav class="header-nav-container">
                 <ul class="header-nav-items">
                     <li class="header-nav-item active"><a href="#">home</a></li>
                     <li class="header-nav-item"><a href="#">tech</a></li>
@@ -29,14 +26,14 @@
                     <li class="header-nav-item"><a href="#">design</a></li>
                     <li class="header-nav-item"><a href="#">shopping</a></li>
                     <div class="header-search">
-                        <i class="fas fa-search"></i> 
+                        <button aria-label="Search"><i class="fas fa-search"></i></button> 
                     </div>
                     <div class="header-theme">
-                        <i class="fas fa-moon"></i> 
+                        <button aria-label="Change theme"><i class="fas fa-moon"></i></button>
+                    </div>
                 </ul>
-                
-            </div>
-    
+              
+            </nav>
         </div>
     </header>
 
@@ -76,7 +73,7 @@
 
     <div class="marquee-container"> 
         <div class="marquee">
-            <p>FRESH POSTS - STAY TUNED - UPDATED WEEKLY - FRESH POSTS - STAY TUNED - UPDATED WEEKLY - FRESH POSTS - STAY TUNED - UPDATED WEEKLY -</p>
+            <p>FRESH POSTS - STAY TUNED - UPDATED WEEKLY - FRESH POSTS - STAY TUNED - UPDATED WEEKLY - FRESH POSTS - STAY TUNED - UPDATED WEEKLY - FRESH POSTS - STAY TUNED - UPDATED WEEKLY </p>
         </div>
     </div>
 
@@ -164,6 +161,39 @@
         <button id="load-more">Load More</button>
 
     </div>
+    <!-- footer with newsletter, site links, contact links -->
+    <footer>
+        <div class="footer-content-container">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2>SIGN UP TO OUR NEWSLETTER. COMPLETELY FREE, NO SRSLY.</h2>
+                    <form action="ACTUAL_SUBSCRIBE_URL" method="post">
+                        <input type="email" name="email" placeholder="EMAIL">
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+                <div class="newsletter-disclaimer">
+                    <p>By subscribing, you agree to the <span><a href="">Terms of Use</a></span> and <span><a href="">Privacy Policy</a></span> & consent to receive periodic updates and promotional content from [Actual Company Name]. You can unsubscribe at any time. </p>
+                </div>
+            </div>
+            <div class="footer-links-container">
+                <ul class="footer-link-items">
+                    <li class="footer-link-item"><a href="ACTUAL_HOME_URL" aria-label="Home">home</a></li>
+                    <li class="footer-link-item"><a href="ACTUAL_ABOUT_URL" aria-label="About">about</a></li>
+                    <li class="footer-link-item"><a href="ACTUAL_PRIVACY_URL" aria-label="Privacy & terms">privacy & terms</a></li>
+                    <li class="footer-link-item"><a href="ACTUAL_DONOTSELL_URL" aria-label="Do not sell my info">do not sell my info</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials-container">
+                <ul class="footer-social-items">
+                    <li class="footer-social-item"><a href="ACTUAL_FACEBOOK_URL" aria-label="Visit our Facebook page">Facebook</a></li>
+                    <li class="footer-social-item"><a href="ACTUAL_INSTAGRAM_URL" aria-label="Visit our Instagram page">Instagram</a></li>
+                    <li class="footer-social-item"><a href="ACTUAL_TWITTER_URL" aria-label="Visit our Twitter page">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
 
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
