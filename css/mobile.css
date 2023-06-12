@@ -95,9 +95,17 @@
         font-size: 2rem;
     } 
 
+    .header-container {
+        padding: 3rem 0;
+    }
+
     .header-nav-container {
         margin: 0 5%;
       
+    }
+
+    .header-nav-container, .header-utility-container {
+        display: block;
     }
 
     .header-nav-item {
@@ -206,8 +214,13 @@
 
      /* header and hero */
 
+     .header-logo h1 {
+        padding: 0 0 1rem 0 ;
+     }
+
      .header-container {
         display: block;
+        padding: 1rem 0 2rem 0 ;
      }
 
      .header-logo {
@@ -216,12 +229,91 @@
 
     .header-nav-container {
         margin: 0 5%;
+      
+    }
+
+    .header-nav-items {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--second-color);
+        color: var(--primary-color);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9998;
+    }
+
+    .header-nav-items.show {
+        display: flex;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
         
     }
 
-    .header-nav-item {
-        margin-bottom: 1.5rem;
+
+    .dark-mode .header-nav-items {
+        background-color: var(--primary-color);
+        color: var(--second-color);
     }
+
+    .header-nav-item {
+        padding: 1rem 0;
+        margin: 0 0 0 2.5rem;
+    }
+
+    .close-menu {
+        display: none;
+        position: absolute;
+        top: 12%;
+        left: 11%;
+        border: none;
+        background: none;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        z-index: 9998;
+    }
+
+    .close-menu.show {
+        display: block;
+        z-index: 9998;
+    }
+
+    .dark-mode .close-menu {
+        color: var(--second-color);
+    }
+
+    
+    .header-theme {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .hamburger-menu {
+        font-size: 1.2rem;
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+
+    .dark-mode .hamburger-menu {
+        color: var(--second-color);
+        
+    }
+
+
+    /*  */
+    
+    
+
+
+
+    /* hero */
 
     .hero {
         padding: 5%;
@@ -355,6 +447,11 @@
 
      /* header and hero */
 
+     .header-logo h1 {
+        padding: 0 0 1rem 0 ;
+        font-size: 1.6rem;
+     }
+
      .header-container {
         display: block;
      }
@@ -364,14 +461,94 @@
     } 
 
     .header-nav-container {
-        margin: 0 5%;
+        display: block;
+    }
+
+    .header-utility-container {
+        gap: .5rem;
+    }
+
+    .header-nav-items {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--second-color);
+        color: var(--primary-color);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9998;
+    }
+
+    .header-nav-items.show {
+        display: flex;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
         
     }
 
-    .header-nav-item {
-        margin-bottom: 1.5rem;
+
+    .dark-mode .header-nav-items {
+        background-color: var(--primary-color);
+        color: var(--second-color);
     }
 
+    .header-nav-item {
+        padding: 1rem 0;
+        margin: 0 0 0 2.5rem;
+    }
+
+    .close-menu {
+        display: none;
+        position: absolute;
+        top: 12%;
+        left: 11%;
+        border: none;
+        background: none;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        z-index: 9998;
+    }
+
+    .close-menu.show {
+        display: block;
+        z-index: 9998;
+    }
+
+    .dark-mode .close-menu {
+        color: var(--second-color);
+    }
+
+    
+    .header-theme {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .header-search {
+        width: 10rem;
+    }
+
+    .hamburger-menu {
+        font-size: 1rem;
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+
+    .dark-mode .hamburger-menu {
+        color: var(--second-color);
+        
+    }
+
+
+
+    /* hero  */
     .hero {
         padding: 5%;
         display: grid;

@@ -120,76 +120,60 @@
 
 
     .header-container {
-        position: relative;
-        display: grid;
-        grid-template-rows: auto auto; /* two rows, size according to content */
-        grid-template-columns: 100%; 
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-items: center; /* center items */
-        text-align: center; /* center text */
-        gap: 10px; /* optional: space between grid items */
+        text-align: center;
         border-bottom: 1px solid var(--primary-color);
         padding: 2em 0;
     }
-
+    
     .dark-mode .header-container {
         border-bottom: 1px solid var(--second-color);
     }
     
     .header-logo-container {
-        position: relative;
-        grid-column: 1 / span 2; /* occupies the both columns */
-        grid-row: 1; /* occupies the first row */
-      
+        order: 1;
     }
     
-    .header-nav-container {
-        position: relative;
-        grid-column: 1; /* occupies the first column */
-        grid-row: 2; /* occupies the second row */
-        justify-items: start;
-       
+    .header-nav-container, .header-utility-container {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
     }
     
-    .header-nav-item, .header-search, .header-theme {
-        display: inline-block; /* line up horizontally */
+     .header-nav-item, .header-search, .header-theme {
+        display: inline-block;
         margin: 0 1em; /* space between items */
     }
-
+    
     .header-logo {
         font-size: 3em;   
         font-family: var(--bold-ff);
         color: var(--primary-color);
         text-decoration: none;
     }
-
-
-
+    
     .dark-mode .header-logo {
         color: var(--second-color);
     }
-
-
-
-
-
+    
     .header-nav-item a {
         text-decoration: none;
         color: var(--primary-color);
     }
-
+    
     .header-nav-item.active {
         text-decoration: none;
         font-family: var(--bold-ff);
     }
-
-
+    
     .dark-mode .header-nav-item a {
         color: var(--second-color);
     }
-
-
-    .header-search button {
+    
+    .header-search {
         border: 1px solid var(--primary-color);
         width: 12rem;
         text-align:left;
@@ -198,23 +182,35 @@
         background-color: var(--second-color);
         cursor: text;
     }
-
-    .dark-mode .header-search button {
+    
+    .dark-mode .header-search  {
         border: 1px solid var(--second-color);
         background-color: var(--primary-color);
         color: var(--second-color);
     }
-
-    .header-theme button {
+    
+    .header-theme {
         border: none;
         background-color: var(--second-color);
         cursor: pointer;
     }
-
-    .dark-mode .header-theme button  {
+    
+    .dark-mode .header-theme   {
         background-color: transparent;
         color: var(--second-color);
     }
+    
+    .hamburger-menu  {
+        border: none;
+        background-color: transparent;
+        display: none;
+    }
+    
+    .close-menu {
+        display: none;
+    }
+ 
+
 
 
     /* hero */
