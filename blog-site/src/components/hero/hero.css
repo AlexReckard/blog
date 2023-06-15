@@ -1,0 +1,226 @@
+/* hero */
+
+    
+.hero-container {
+    width: auto;
+    height: auto;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* two columns: large one on left, small one on right */
+    grid-template-rows: 1fr 1fr; /* two rows: for two small images */
+    gap: 30px;
+    padding: 5% 12.5%;
+}
+
+.hero-featured {
+    position: relative;
+    grid-row: span 2; /* featured image spans two rows */
+}
+
+.hero-small {
+    position: relative;
+    /* no need to specify grid-row, as it defaults to occupying one row */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent black */
+    color: var(--second-color);
+    padding: 10px 30px;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+}
+
+.hero-featured img, .hero-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hero-featured .text-overlay h2, .hero-small .text-overlay h3 {
+    font-family: var(--bold-ff);
+    margin: 0;
+    max-width: 66%;
+    text-align: left;
+}
+
+.hero-small .text-overlay h3 {
+    max-width: 80%;
+}
+
+
+.hero-featured .text-overlay p, .hero-small .text-overlay p {
+    position: absolute;
+    right: 5%;
+    bottom: 11%;
+    font-family: var(--default-ff);
+    font-size: .9rem;
+}
+
+.lottie-scroll-container {
+    color: var(--primary-color);
+    width: 100%;
+    height: 75px; 
+}
+
+.dark-mode .lottie-scroll-container {
+   
+    filter: invert();
+}
+
+
+
+/* responsiveness */
+
+/* Responsive Styles for Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    /* header and hero */
+
+    .header-logo {
+        font-size: 2.5em;
+    } 
+
+    .hero {
+        padding: 5% 10%;
+    }
+
+    .text-overlay {
+        padding: 0 .5rem;
+        width: 100%;
+    }
+
+    .text-overlay h2 {
+        font-size: 1.25rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay h3 {
+        max-width: 75%;
+    }
+
+    .text-overlay h3 {
+        font-size: .9rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay p {
+        font-size: .7rem;
+    }
+}
+
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .hero {
+        padding: 7.5% 2.5%;
+        gap: 1rem;
+    }
+
+    .text-overlay {
+        padding: 0 .5rem;
+        width: 100%;
+    }
+
+    .text-overlay h2 {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay h3 {
+        max-width: 75%;
+    }
+
+    .text-overlay h3 {
+        font-size: .9rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay p {
+        font-size: .7rem;
+    }
+
+}
+
+
+/* phones */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    /* hero */
+
+    .hero {
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .text-overlay {
+        padding: 0 .5rem;
+        width: 100%;
+    }
+
+    .text-overlay h2 {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay h3 {
+        max-width: 75%;
+    }
+
+    .text-overlay h3 {
+        font-size: .9rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay p {
+        font-size: .7rem;
+    }
+
+}   
+
+/* smaller phones */
+@media screen and (max-width: 320px) {
+
+    /* hero  */
+    .hero {
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .text-overlay {
+        padding: 0 .5rem;
+        width: 100%;
+    }
+
+    .text-overlay h2 {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay h3 {
+        max-width: 75%;
+    }
+
+    .text-overlay h3 {
+        font-size: .9rem;
+        padding: .5rem;
+    }
+
+    .hero-small .text-overlay p {
+        font-size: .7rem;
+    }
+
+}
