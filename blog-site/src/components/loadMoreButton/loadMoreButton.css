@@ -1,0 +1,47 @@
+   /*  load more articles button */
+
+   .load-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+}
+
+#load-more {
+    font-size: 4em;
+    font-family: var(--bold-ff);
+    color: var(--primary-color);
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dark-mode #load-more {
+    color: var(--second-color);
+}
+
+
+
+/* responsiveness */
+
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #load-more {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* Responsive Styles for Phone and Very Small Phone Screens */
+@media screen and (min-width: 320px) and (max-width: 767px), 
+    screen and (max-width: 320px){
+    #load-more {
+        font-size: 2rem;
+    }
+
+}
+
+
