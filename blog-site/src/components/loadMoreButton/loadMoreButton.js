@@ -1,19 +1,14 @@
 import React from 'react';
-
 import './loadMoreButton.css';  
 
+const LoadMoreButton = ({ loadMore, hasMore }) => {
+  return (
+    <div className="load-more-container">
+      <button id="load-more" onClick={loadMore} disabled={!hasMore}>
+        {hasMore ? "Load More" : "No More Content"}
+      </button>
+    </div>
+  );
+};
 
-
-const LoadMoreButton = () => {
-    return (
-        <div className="load-more-container">
-            <button id="load-more">Load More</button>
-        </div>
-    );
-  };
-  
 export default LoadMoreButton;
-
-
-
-
