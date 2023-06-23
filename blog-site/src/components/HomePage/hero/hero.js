@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import './hero.css';  
 
-import featuredImg from "../../images/featured.png";
-import smallImg1 from "../../images/small-1.png";
-import smallImg2 from "../../images/small-2.png";
+import featuredImg from "../../../images/featured.png";
+import smallImg1 from "../../../images/small-1.png";
+import smallImg2 from "../../../images/small-2.png";
 import lottie from "lottie-web";
 
 const Hero = () => {

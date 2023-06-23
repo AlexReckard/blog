@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import ArticleCard from '../articleCard/articleCard.js';  
 import LoadMoreButton from '../loadMoreButton/loadMoreButton.js';
 
-import image1 from '../../images/kaws.png';
-import image2 from '../../images/lv.png';
-import image3 from '../../images/ny.png';
-import image4 from '../../images/pizza.png';
+import image1 from '../../../images/kaws.png';
+import image2 from '../../../images/lv.png';
+import image3 from '../../../images/ny.png';
+import image4 from '../../../images/pizza.png';
 
 // implementing dummy data to visualize the funtionality better
 const ArticleList = () => {

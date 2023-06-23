@@ -1,17 +1,25 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+// const path = require("path");
 
-/** @type {import('gatsby').GatsbyNode['createPages']}
-//  */
-// exports.createPages = async ({ actions }) => {
-//   const { createPage } = actions
-//   createPage({
-//     path: "/using-dsg",
-//     component: require.resolve("./src/templates/using-dsg.js"),
-//     context: {},
-//     defer: true,
-//   })
-// }
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions;
+
+//   const result = await graphql(`
+//     {
+//       allMarkdownRemark {
+//         group(field: frontmatter___category) {
+//           fieldValue
+//         }
+//       }
+//     }
+//   `);
+
+//   result.data.allMarkdownRemark.group.forEach(({ fieldValue }) => {
+//     createPage({
+//       path: `/category/${fieldValue}`,
+//       component: path.resolve("./src/templates/category-template.js"),
+//       context: {
+//         category: fieldValue,
+//       },
+//     });
+//   });
+// };

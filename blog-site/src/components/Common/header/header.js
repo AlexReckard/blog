@@ -26,12 +26,12 @@ const Header = () => {
       </div>
       <nav className="header-nav-container">
         <ul className="header-nav-items">
-          <li className="header-nav-item active"><Link to="/#">home</Link></li>
-          <li className="header-nav-item"><Link to="/#">tech</Link></li>
-          <li className="header-nav-item"><Link to="/#">food</Link></li>
-          <li className="header-nav-item"><Link to="/#">travel</Link></li>
-          <li className="header-nav-item"><Link to="/#">design</Link></li>
-          <li className="header-nav-item"><Link to="/#">shopping</Link></li>
+          <li className="header-nav-item active"><Link to="/">home</Link></li>
+          <li className="header-nav-item"><Link to="/category">tech</Link></li>
+          <li className="header-nav-item"><Link to="/category">food</Link></li>
+          <li className="header-nav-item"><Link to="/category">travel</Link></li>
+          <li className="header-nav-item"><Link to="/category">design</Link></li>
+          <li className="header-nav-item"><Link to="/category">shopping</Link></li>
         </ul>
         <div className="header-utility-container">
           <button aria-label="Close menu" className="close-menu"><i className="fas fa-times"></i></button>

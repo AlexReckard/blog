@@ -1,22 +1,21 @@
-import React from "react"
+import * as React from "react"
 
 import Header from '../components/Common/header/header.js';
-import Hero from '../components/HomePage/hero/hero.js';
-import Marquee from "../components/HomePage/marquee/marquee.js";
+import CategoryHero from "../components/CategoryPage/categoryHero.js";
 import ArticleList from "../components/Common/articleList/articleList.js";
 import Footer from '../components/Common/footer/footer.js';
 
 
-function HomePage() {
+
+function CategoryPage() {
   return (
     <div>
       <Header />
-      <Hero />
-      <Marquee />
+      <CategoryHero />
       <ArticleList />
       <Footer />
     </div>
   );
 }
 
-export default HomePage
+export default CategoryPage

@@ -23,8 +23,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // Add this section to tell Gatsby to source your markdown files
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/articles`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`, // Add this line to enable remark transformer
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,4 +48,5 @@ module.exports = {
     },
   ],
 }
+
 

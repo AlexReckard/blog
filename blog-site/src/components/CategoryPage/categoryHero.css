@@ -1,0 +1,153 @@
+/* 
+--primary-color : #222;
+--second-color: #fff;
+--tri-color: #e4e4e4;
+--dark-tri-color: #292929;
+
+--default-ff:  Arial, Helvetica, sans-serif;
+--regular-ff: 'HKGrotesk-Regular', Arial, sans-serif;
+--bold-ff: 'HKGrotesk-ExtraBold', Arial, sans-serif;
+
+
+--fs-normal: 1em;
+--fs-heading: 2em;
+ */
+
+.category-hero-container {
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    padding: 2rem;
+}
+
+.dark-mode .category-hero-container {
+    background-color: var(--primary-color);
+    color: var(--second-color);
+   
+}
+
+.category-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 15%;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.category-title ul li {
+
+    font-size: clamp(3rem,5vw ,4.5rem);
+    font-family: var(--bold-ff);
+    text-decoration: none;
+    list-style: none;
+    line-height: 0.75;
+    letter-spacing: 2px;
+   
+}
+
+.category-img img {
+    height: auto;
+    width: clamp(60%, 80vw , 90%);
+}
+
+.category-description {
+    grid-column: 1 / span 2;
+    font-family: var(--regular-ff);
+    text-align: left;
+}
+
+
+/* responsiveness */
+
+/* Responsive Styles for Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .category-hero {
+        margin: 0 15%;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .category-img img {
+        height: auto;
+        width: 100%;
+    }
+    
+}
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .category-hero {
+        margin: auto 0;
+    }
+
+    
+    .category-title ul li {
+        font-size: 3.75rem;
+        letter-spacing: 4px;
+    
+    }
+
+    .category-img img {
+        width: 85%;
+        height: auto;
+    }    
+
+
+    .category-description {
+        max-width: 100%;
+    }
+    
+}
+
+
+/* phones */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .category-hero-container {
+        padding: 1rem;
+    }
+
+
+    .category-hero {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    
+    }
+    
+    .category-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 1rem;
+    }
+    
+    .category-title ul li {
+    
+        font-size: 2.75rem;
+        letter-spacing: 5px;
+       
+    }
+    
+    .category-img img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .category-description {
+        max-width: 100%;
+    }
+    
+}   
+
+/* smaller phones */
+@media screen and (max-width: 320px) {
+
+
+}
