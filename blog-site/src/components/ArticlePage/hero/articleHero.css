@@ -1,0 +1,23 @@
+.article-hero-container {
+    margin: 0 5%;
+    padding: 2.5%;
+}
+
+.article-hero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.article-img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+figcaption {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1%;
+}

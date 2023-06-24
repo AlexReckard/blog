@@ -1,0 +1,21 @@
+.article-content-container {
+    margin: 0 12.5%;
+    padding: 0;
+}
+
+article {
+    line-height: 1.7;
+    text-align: left;
+    border-top: 1px solid black;
+
+}
+
+.dark-mode article {
+    border-top: 1px solid white;
+ 
+}
+
+
+article p {
+    padding: 3% 0;
+}

@@ -61,6 +61,8 @@
         --tri-color: #e4e4e4;
         --dark-tri-color: #292929;
 
+        --link-color: #747474;
+
         --default-ff:  Arial, Helvetica, sans-serif;
         --regular-ff: 'HKGrotesk-Regular', Arial, sans-serif;
         --bold-ff: 'HKGrotesk-ExtraBold', Arial, sans-serif;
@@ -71,9 +73,12 @@
         
     }
 
+   
+
     html {
         max-width: 100%;
         background-color: var(--tri-color);
+       
     }
 
     /* * {
