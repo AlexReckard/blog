@@ -1,21 +1,58 @@
 .article-content-container {
-    margin: 0 12.5%;
+    margin: 0 15%;
     padding: 0;
 }
 
 article {
-    line-height: 1.7;
+    line-height: 1.6;
     text-align: left;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--primary-color);
 
 }
 
 .dark-mode article {
-    border-top: 1px solid white;
+    border-top: 1px solid var(--second-color);
  
 }
 
 
 article p {
-    padding: 3% 0;
+    padding: 2.5% 0;
 }
+
+
+
+/* responsiveness */
+
+/* Responsive Styles for Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    
+    .article-content-container {
+        margin: 0 12.5%;
+    }
+    
+     
+}
+
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .article-content-container {
+        margin: 0 5%;
+    }
+    
+}
+
+
+/* phones */
+@media screen and (min-width: 320px) and (max-width: 767px), screen and (max-width: 320px) {
+    .article-content-container {
+        margin: 0 2.5%;
+    }
+
+    article p {
+        padding: 7.5% 0;
+    }
+    
+
+}   

@@ -40,6 +40,12 @@
     overflow-wrap: break-word;
   }
 
+
+  h1, h2{
+    font-family: var(--bold-ff);
+  }
+
+
  
 
   /*  */
