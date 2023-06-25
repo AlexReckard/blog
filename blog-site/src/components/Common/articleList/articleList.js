@@ -1,36 +1,66 @@
 import React, { useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import ArticleCard from '../articleCard/articleCard.js';  
 import LoadMoreButton from '../loadMoreButton/loadMoreButton.js';
 
-import image1 from '../../../images/kaws.png';
-import image2 from '../../../images/lv.png';
-import image3 from '../../../images/ny.png';
-import image4 from '../../../images/pizza.png';
+const ArticleList = ({ category, skip = 0 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            date(formatString: "MM-DD-YY")
+            category
+            image {
+              publicURL
+            }
+            alt
+            imageCredit
+            readTime
+            description
+            author
+          }
+          id
+        }
+      }
+    }
+  `);
 
-// implementing dummy data to visualize the funtionality better
-const ArticleList = () => {
-  const allArticles = [
-    {id: 1, category: "Design", title: "Worldwide KAWS: Permanent Installation Artworks", description: "We unveil the captivating sculptures of KAWS’ iconic artworks from around the world.", image: image1, alt: "kaws scultpure", readTime: "6", date: "03-19-23"},
-    {id: 2, category: "Shopping", title: "Louis Vuitton: Essential Wardrobe Must-Haves ", description: "Unlock the epitome of style with Louis Vuitton's must-have wardrobe essentials.", image: image2, alt: "lv embroidery", readTime: "6", date: "03-10-23"},
-    {id: 3, category: "Travel", title: "Captivating NYC: Unveiling 5 Instagram-Worthy Hotspots", description: "Unleash your inner photographer & discover  Instagram-worthy spots that NYC has to offer.", image: image3, alt: "dumbo: down under manhattan bridge overpass", readTime: "5", date: "03-7-23"},
-    {id: 4, category: "Food", title: "Chicago: Unveiling the Finest Deep-Dish Pizza Delights", description: "Indulge in Chicago's unrivaled deep-dish pizza with our ultimate guide to the city's finest slices.", image: image4,  alt: "pizza restaurent neon sign", readTime: "9", date: "03-2-23"}
-  ];
+  const allArticles = data.allMarkdownRemark.nodes
+  .filter(node => category ? node.frontmatter.category === category : true)
+  .map(node => ({
+    id: node.id,
+    category: node.frontmatter.category,
+    title: node.frontmatter.title,
+    description: node.frontmatter.description,
+    image: node.frontmatter.image?.publicURL,
+    alt: node.frontmatter.alt,
+    imageCredit: node.frontmatter.imageCredit,
+    readTime: node.frontmatter.readTime,
+    date: node.frontmatter.date,
+    author: node.frontmatter.author
+  
+  })).reverse();
+
+const [articlesToShow, setArticlesToShow] = useState(allArticles.slice(skip, skip + 1)); //articles to show
 
 
-  const [articlesToShow, setArticlesToShow] = useState(allArticles.slice(0, 1)); // initial number of articles to show
+const loadMoreArticles = () => {
+  setArticlesToShow(allArticles.slice(skip, articlesToShow.length + skip + 1)); 
+};
 
-  const loadMoreArticles = () => {
-    setArticlesToShow(allArticles.slice(0, articlesToShow.length + 1)); // show 2 more articles
-  };
 
   return (
     <div className='articles-container'>
     {articlesToShow.map(article => 
       <ArticleCard key={article.id} article={article} />
     )}
-    <LoadMoreButton loadMore={loadMoreArticles} hasMore={articlesToShow.length < allArticles.length} />
+    <LoadMoreButton loadMore={loadMoreArticles} hasMore={articlesToShow.length < (allArticles.length - skip)} />
+
   </div>
   );
 };
+
 
 export default ArticleList;

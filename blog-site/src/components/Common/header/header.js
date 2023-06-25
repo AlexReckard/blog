@@ -27,11 +27,11 @@ const Header = () => {
       <nav className="header-nav-container">
         <ul className="header-nav-items">
           <li className="header-nav-item active"><Link to="/">home</Link></li>
-          <li className="header-nav-item"><Link to="/category">tech</Link></li>
-          <li className="header-nav-item"><Link to="/category">food</Link></li>
-          <li className="header-nav-item"><Link to="/category">travel</Link></li>
-          <li className="header-nav-item"><Link to="/category">design</Link></li>
-          <li className="header-nav-item"><Link to="/category">shopping</Link></li>
+          <li className="header-nav-item"><Link to="/category/tech">tech</Link></li>
+          <li className="header-nav-item"><Link to="/category/food">food</Link></li>
+          <li className="header-nav-item"><Link to="/category/travel">travel</Link></li>
+          <li className="header-nav-item"><Link to="/category/design">design</Link></li>
+          <li className="header-nav-item"><Link to="/category/shopping">shopping</Link></li>
         </ul>
         <div className="header-utility-container">
           <button aria-label="Close menu" className="close-menu"><i className="fas fa-times"></i></button>

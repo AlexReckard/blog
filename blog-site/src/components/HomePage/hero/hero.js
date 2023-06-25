@@ -1,13 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import './hero.css';  
-
-import featuredImg from "../../../images/featured.png";
-import smallImg1 from "../../../images/small-1.png";
-import smallImg2 from "../../../images/small-2.png";
 import lottie from "lottie-web";
 
-const Hero = () => {
+const Hero = ({ articles }) => {
   const container = useRef(null);
 
   useEffect(() => {
@@ -23,27 +19,15 @@ const Hero = () => {
   return (
     <div className="hero-container">
         <div className="hero">
-            <div className="hero-featured">
-                <Link to="/#"><img src={featuredImg} alt="Featured" /></Link>
-                <div className="text-overlay">
-                    <h2>Artificial Intelligence: Boom or Gloom? Unveiling the Reality.</h2>
-                    <p>03/12/23</p>
+            {articles.map((article, index) => (
+                <div key={article.id} className={index === 0 ? "hero-featured" : "hero-small"}>
+                    <Link to={`/${article.category}/${article.id}`}><img src={article.image.publicURL} alt={article.alt} /></Link>
+                    <div className="text-overlay">
+                        <h2>{article.title}</h2>
+                        <p>{article.date}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="hero-small">
-                <Link to="/#"><img src={smallImg1} alt="Small 1" /></Link>
-                <div className="text-overlay">
-                    <h3>5 Ways to Declutter and Find Serenity</h3>
-                    <p>03/09/23</p>
-                </div>
-            </div>
-            <div className="hero-small">
-                <Link to="/#"><img src={smallImg2} alt="Small 2" /></Link>
-                <div className="text-overlay">
-                    <h3>Van Gogh Exhibit: My Enchanting Journey</h3>
-                    <p>03/06/23</p>
-                </div>
-            </div>
+            ))}
         </div>
         <div className="lottie-scroll-container" id="lottie-scroll" ref={container}></div>
     </div>
