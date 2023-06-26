@@ -9,7 +9,10 @@ import Footer from '../components/Common/footer/footer.js';
 import { graphql } from "gatsby";
 
 function HomePage({ data }) {
-  const articles = data.allMarkdownRemark.edges.map(({ node }) => node.frontmatter).reverse();
+  const articles = data.allMarkdownRemark.edges.map(({ node }) => ({
+    ...node.frontmatter,
+    slug: node.fields.slug, // include the slug field in the article data
+  })).reverse();
 
   return (
     <div>
@@ -39,6 +42,9 @@ export const query = graphql`
             readTime
             description
             author
+          }
+          fields {
+            slug
           }
           id
         }

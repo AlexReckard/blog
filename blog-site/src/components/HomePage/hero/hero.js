@@ -21,7 +21,7 @@ const Hero = ({ articles }) => {
         <div className="hero">
             {articles.map((article, index) => (
                 <div key={article.id} className={index === 0 ? "hero-featured" : "hero-small"}>
-                    <Link to={`/${article.category}/${article.id}`}><img src={article.image.publicURL} alt={article.alt} /></Link>
+                    <Link to={`/category/${article.category}${article.slug}`}><img src={article.image.publicURL} alt={article.alt} /></Link>
                     <div className="text-overlay">
                         <h2>{article.title}</h2>
                         <p>{article.date}</p>

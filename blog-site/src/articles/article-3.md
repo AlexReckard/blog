@@ -1,13 +1,14 @@
 ---
-title: "Travel Article"
-date: "2023-06-22"
+id: "3"
 category: "travel"
-image: "../images/ny.png"
-alt: "Alternative text for travel image"
-readTime: "5 minutes"
-description: "This is a brief description of the travel article."
-author: "John Doe"
-imageCredit: "John Doe"
+title: "Best Photo Spots in New York"
+description: "Exploring the most photogenic locations in the Big Apple."
+image: "../images/nyc.jpg"
+alt: "New York"
+imageCredit: "Image provided by Unsplash"
+readTime: "7"
+date: "2023-07-02"
+author: "Alex Doe"
 ---
 
-This is the content of the travel article.
+From the Brooklyn Bridge to Central Park, New York City is full of picture-perfect locations. This guide will help you find the best spots to take unforgettable photos.

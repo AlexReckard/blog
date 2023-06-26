@@ -1,9 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import './header.css';  
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // Initialize state with value from localStorage or false as default
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem('darkMode')) || false;
+    }
+    return false;
+  });
+
+  // Whenever darkMode changes, update localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('darkMode', JSON.stringify(darkMode));
+      if (darkMode) {
+        document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
+      }
+    }
+  }, [darkMode]);
+
 
   const handleToggle = () => {
     setDarkMode(!darkMode);

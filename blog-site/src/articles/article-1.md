@@ -1,13 +1,14 @@
 ---
-title: "Tech Article"
-date: "2023-06-24"
+id: "1"
 category: "tech"
-image: "../images/featured.png"
-alt: "Alternative text for tech image"
-readTime: "5 minutes"
-description: "This is a brief description of the tech article."
+title: "Exploring Artificial Intelligence"
+description: "Understanding the intricacies and potential of AI."
+image: "../images/ai.jpg"
+alt: "Artificial Intelligence"
+imageCredit: "Image provided by Unsplash"
+readTime: "8"
+date: "2023-06-30"
 author: "John Doe"
-imageCredit: "John Doe"
 ---
 
-This is the content of the tech article.
+Artificial intelligence (AI) has the potential to revolutionize many aspects of our lives. This article explores the potential applications and ethical implications of AI.

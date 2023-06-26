@@ -11,8 +11,8 @@ const ArticleHero = ({ article }) => {
         <div className='article-hero'>
             <div className='article-img'>
               <figure>
-                <img src={article.image || ''} alt={article.alt || 'Hero Image'} />
-                <figcaption>{article.imageCredit || 'Caption'}</figcaption>
+                <img src={article.image.publicURL || ''} alt={article.alt || 'Hero Image'} />
+                <figcaption>Photo By: {article.imageCredit || 'Caption'}</figcaption>
               </figure>
             </div>   
         </div>

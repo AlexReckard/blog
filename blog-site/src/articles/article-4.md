@@ -1,13 +1,14 @@
 ---
-title: "Design Article"
-date: "2023-06-21"
+id: "4"
 category: "design"
+title: "Understanding the Art of KAWS"
+description: "Exploring KAWS and his influence on the world of design."
 image: "../images/kaws.png"
-alt: "Alternative text for design image"
-readTime: "5 minutes"
-description: "This is a brief description of the design article."
-author: "John Doe"
-imageCredit: "John Doe"
+alt: "KAWS Art"
+imageCredit: "Image provided by Unsplash"
+readTime: "7"
+date: "2023-07-03"
+author: "Maria Doe"
 ---
 
-This is the content of the design article.
+KAWS is an artist who has left a significant impact on the world of design. His permanent installations are both thought-provoking and visually captivating. Let's delve into his unique style.

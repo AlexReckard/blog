@@ -1,5 +1,5 @@
 .article-hero-container {
-    margin: 0 5%;
+    margin: 0 12.5%;
     padding: 2.5%;
 }
 
@@ -12,6 +12,11 @@
 .article-img {
     max-width: 100%;
     height: auto;
+}
+
+.article-img img {
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
 }
 
 
