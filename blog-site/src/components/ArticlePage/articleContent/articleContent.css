@@ -16,13 +16,22 @@ article {
 }
 
 
-article p {
-    padding: 2.5% 0;
+
+article p, article h1{
+    padding: 2rem 0;
 }
 
 
 
-/* responsiveness */
+article p:first-of-type::first-letter {
+    font-family: var(--dropCap-ff);
+    font-size: 300%;
+    float: left;
+    padding-right: 0.1em;
+    line-height: 1; 
+    
+}
+
 
 /* Responsive Styles for Laptop Screens */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
@@ -30,10 +39,8 @@ article p {
     .article-content-container {
         margin: 0 12.5%;
     }
-    
-     
+  
 }
-
 
 /* Responsive Styles for Tablet Screens */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -43,16 +50,16 @@ article p {
     
 }
 
-
 /* phones */
 @media screen and (min-width: 320px) and (max-width: 767px), screen and (max-width: 320px) {
     .article-content-container {
         margin: 0 2.5%;
     }
 
-    article p {
-        padding: 7.5% 0;
-    }
     
+    article p, article h1{
+        padding: 1rem 0;
+    }
+
 
 }   

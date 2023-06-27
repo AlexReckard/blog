@@ -61,6 +61,11 @@
         src: url('../fonts/HKGrotesk-ExtraBold.otf');
     }
 
+    @font-face {
+      font-family: 'Akira';
+      src: url('../fonts/Akira.otf');
+  }
+
     :root {
         --primary-color : #222;
         --second-color: #fff;
@@ -72,7 +77,7 @@
         --default-ff:  Arial, Helvetica, sans-serif;
         --regular-ff: 'HKGrotesk-Regular', Arial, sans-serif;
         --bold-ff: 'HKGrotesk-ExtraBold', Arial, sans-serif;
-
+        --dropCap-ff: 'Akira', Arial, sans-serif;
 
         --fs-normal: 1em;
         --fs-heading: 2em;

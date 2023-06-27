@@ -28,6 +28,16 @@ figcaption {
 }
 
 
+figcaption a {
+    color: var(--primary-color);
+    padding-left: .5%;
+}
+
+.dark-mode figcaption a {
+    color: var(--secondary-color);
+}
+
+
 
 
 /* responsiveness */
@@ -52,8 +62,9 @@ figcaption {
 
     
     figcaption {
-        font-size: .9rem;
+        font-size: .75rem;
         padding: 2%;
     }
+
 }
 

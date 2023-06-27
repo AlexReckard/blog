@@ -38,7 +38,8 @@ export const query = graphql`
               publicURL
             }
             alt
-            imageCredit
+            imageCreditLink
+            imageCreditName
             readTime
             description
             author

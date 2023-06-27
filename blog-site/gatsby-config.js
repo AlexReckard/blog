@@ -23,7 +23,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // Add this section to tell Gatsby to source your markdown files
+    // Keep your existing filesystem source for articles
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,7 +33,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`, // Add this line to enable remark transformer
+    // Modify this section to include gatsby-remark-images
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -48,5 +61,3 @@ module.exports = {
     },
   ],
 }
-
-

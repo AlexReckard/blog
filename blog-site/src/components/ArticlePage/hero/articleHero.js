@@ -12,7 +12,9 @@ const ArticleHero = ({ article }) => {
             <div className='article-img'>
               <figure>
                 <img src={article.image.publicURL || ''} alt={article.alt || 'Hero Image'} />
-                <figcaption>Photo By: {article.imageCredit || 'Caption'}</figcaption>
+                  <figcaption>
+                      Photo By:<a href={article.imageCreditLink || '#'} target="_blank" rel="noopener noreferrer">{article.imageCreditName || 'Image Credit Name'}</a>
+                  </figcaption>
               </figure>
             </div>   
         </div>

@@ -40,7 +40,8 @@ export const query = graphql`
             readTime
             description
             author
-            imageCredit
+            imageCreditLink
+            imageCreditName
         }
         }
     }

@@ -19,7 +19,8 @@ const ArticleList = ({ category, skip = 0 }) => {
             publicURL
           }
           alt
-          imageCredit
+          imageCreditLink
+          imageCreditName
           readTime
           description
           author
@@ -40,7 +41,8 @@ const allArticles = data.allMarkdownRemark.nodes
   description: node.frontmatter.description,
   image: node.frontmatter.image?.publicURL,
   alt: node.frontmatter.alt,
-  imageCredit: node.frontmatter.imageCredit,
+  imageCreditLink: node.frontmatter.imageCreditLink,
+  imageCreditName: node.frontmatter.imageCreditName,
   readTime: node.frontmatter.readTime,
   date: node.frontmatter.date,
   author: node.frontmatter.author
