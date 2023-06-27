@@ -39,9 +39,9 @@
     cursor: pointer;
 }
 
-/* .hero-featured, .hero-small {
-    aspect-ratio: 16 / 9;
-} */
+.hero-featured, .hero-small {
+    aspect-ratio: 5 / 4;
+}
 
 
 .hero-featured img, .hero-small img {
@@ -59,7 +59,7 @@
     text-align: left;
 }
 
-.hero-small .text-overlay h3 {
+.hero-small .text-overlay h2 {
     max-width: 80%;
 }
 
@@ -129,7 +129,7 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
     .hero {
-        padding: 7.5% 2.5%;
+        padding: 7.5%;
         gap: 1rem;
     }
 
@@ -170,6 +170,12 @@
         grid-template-columns: 1fr;
     }
 
+    .hero-small {
+        aspect-ratio: 16 / 9;
+    }
+    
+
+ 
     .text-overlay {
         padding: 0 .5rem;
         width: 100%;
@@ -204,6 +210,11 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+
+    .hero-small {
+        aspect-ratio: 16 / 9;
+    }
+    
 
     .text-overlay {
         padding: 0 .5rem;
