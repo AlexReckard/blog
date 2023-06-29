@@ -170,7 +170,7 @@
         z-index: 9998;
     }
 
-    .header-nav-items.show {
+    .header-nav-items.open {
         display: flex;
         transform: translateX(0);
         transition: transform 0.3s ease-in-out;
@@ -200,7 +200,7 @@
         z-index: 9998;
     }
 
-    .close-menu.show {
+    .close-menu.open {
         display: block;
         z-index: 9998;
     }

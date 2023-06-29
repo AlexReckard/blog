@@ -3,13 +3,16 @@ import { Link } from 'gatsby';
 import './header.css';  
 
 const Header = () => {
-  // Initialize state with value from localStorage or false as default
+   // Initialize state with value from localStorage or false as default
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       return JSON.parse(localStorage.getItem('darkMode')) || false;
     }
     return false;
   });
+
+  // state for the hamburger menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Whenever darkMode changes, update localStorage
   useEffect(() => {
@@ -25,7 +28,7 @@ const Header = () => {
     }
   }, [darkMode]);
 
-
+ 
   const handleToggle = () => {
     setDarkMode(!darkMode);
 
@@ -46,7 +49,7 @@ const Header = () => {
         </Link>
       </div>
       <nav className="header-nav-container">
-        <ul className="header-nav-items">
+        <ul className={`header-nav-items ${menuOpen ? 'open' : ''}`}>
           <li className="header-nav-item active"><Link to="/">home</Link></li>
           <li className="header-nav-item"><Link to="/category/tech">tech</Link></li>
           <li className="header-nav-item"><Link to="/category/food">food</Link></li>
@@ -55,8 +58,20 @@ const Header = () => {
           <li className="header-nav-item"><Link to="/category/shopping">shopping</Link></li>
         </ul>
         <div className="header-utility-container">
-          <button aria-label="Close menu" className="close-menu"><i className="fas fa-times"></i></button>
-          <button aria-label="hamburger menu" className="hamburger-menu"><i className="fas fa-bars"></i></button>
+           <button 
+            aria-label="Close menu" 
+            className={`close-menu ${menuOpen ? 'open' : ''}`} 
+            onClick={() => setMenuOpen(false)}
+          >
+            <i className="fas fa-times"></i>
+          </button>
+          <button 
+            aria-label="hamburger menu" 
+            className="hamburger-menu" 
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <i className="fas fa-bars"></i>
+          </button>
           <button aria-label="Search" className="header-search"><i className="fas fa-search"></i></button>
           <button 
             aria-label="Change theme" 
