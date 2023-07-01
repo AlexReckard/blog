@@ -54,19 +54,19 @@ const Header = () => {
             <Link to="/" activeClassName="active">home</Link>
           </li>
           <li className="header-nav-item">
-            <Link to="/category/tech" activeClassName="active">tech</Link>
+            <Link to="/category/tech" activeClassName="active" partiallyActive={true}>tech</Link>
           </li>
           <li className="header-nav-item">
-            <Link to="/category/food" activeClassName="active">food</Link>
+            <Link to="/category/food" activeClassName="active" partiallyActive={true}>food</Link>
           </li>
           <li className="header-nav-item">
-            <Link to="/category/travel" activeClassName="active">travel</Link>
+            <Link to="/category/travel" activeClassName="active" partiallyActive={true}>travel</Link>
           </li>
           <li className="header-nav-item">
-            <Link to="/category/design" activeClassName="active">design</Link>
+            <Link to="/category/design" activeClassName="active" partiallyActive={true}>design</Link>
           </li>
           <li className="header-nav-item">
-            <Link to="/category/shopping" activeClassName="active">shopping</Link>
+            <Link to="/category/shopping" activeClassName="active" partiallyActive={true}>shopping</Link>
           </li>
         </ul>
         <div className="header-utility-container">
