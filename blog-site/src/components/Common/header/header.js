@@ -49,13 +49,25 @@ const Header = () => {
         </Link>
       </div>
       <nav className="header-nav-container">
-        <ul className={`header-nav-items ${menuOpen ? 'open' : ''}`}>
-          <li className="header-nav-item active"><Link to="/">home</Link></li>
-          <li className="header-nav-item"><Link to="/category/tech">tech</Link></li>
-          <li className="header-nav-item"><Link to="/category/food">food</Link></li>
-          <li className="header-nav-item"><Link to="/category/travel">travel</Link></li>
-          <li className="header-nav-item"><Link to="/category/design">design</Link></li>
-          <li className="header-nav-item"><Link to="/category/shopping">shopping</Link></li>
+      <ul className={`header-nav-items ${menuOpen ? 'open' : ''}`}>
+          <li className="header-nav-item">
+            <Link to="/" activeClassName="active">home</Link>
+          </li>
+          <li className="header-nav-item">
+            <Link to="/category/tech" activeClassName="active">tech</Link>
+          </li>
+          <li className="header-nav-item">
+            <Link to="/category/food" activeClassName="active">food</Link>
+          </li>
+          <li className="header-nav-item">
+            <Link to="/category/travel" activeClassName="active">travel</Link>
+          </li>
+          <li className="header-nav-item">
+            <Link to="/category/design" activeClassName="active">design</Link>
+          </li>
+          <li className="header-nav-item">
+            <Link to="/category/shopping" activeClassName="active">shopping</Link>
+          </li>
         </ul>
         <div className="header-utility-container">
            <button 
