@@ -15,15 +15,15 @@ const Footer = () => {
                     </form>
                 </div>
                 <div className="newsletter-disclaimer">
-                    <p>By subscribing, you agree to the <span><Link to="/#">Terms of Use</Link></span> and <span><Link to="/#">Privacy Policy</Link></span> & consent to receive periodic updates and promotional content from [Actual Company Name]. You can unsubscribe at any time. </p>
+                    <p>By subscribing, you agree to the <span><Link to="/privacyTerms">Terms of Use</Link></span> and <span><Link to="/privacyTerms">Privacy Policy</Link></span> & consent to receive periodic updates and promotional content from [Actual Company Name]. You can unsubscribe at any time. </p>
                 </div>
             </div>
             <div className="footer-links-container">
                 <ul className="footer-link-items">
                     <li className="footer-link-item"><Link to="/#" aria-label="Home">home</Link></li>
-                    <li className="footer-link-item"><Link to="/#" aria-label="About">about</Link></li>
-                    <li className="footer-link-item"><Link to="/#" aria-label="Privacy & terms">privacy & terms</Link></li>
-                    <li className="footer-link-item"><Link to="/#" aria-label="Do not sell my info">do not sell my info</Link></li>
+                    <li className="footer-link-item"><Link to="/about" aria-label="About">about</Link></li>
+                    <li className="footer-link-item"><Link to="/privacyTerms" aria-label="Privacy & terms">privacy & terms</Link></li>
+                    <li className="footer-link-item"><Link to="/doNotSellInfo" aria-label="Do not sell my info">do not sell my info</Link></li>
                 </ul>
             </div>
             <div className="footer-socials-container">

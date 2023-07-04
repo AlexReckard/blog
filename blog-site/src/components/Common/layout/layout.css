@@ -1,0 +1,106 @@
+.layout main {
+    margin: 0 20%;
+    padding: 2.5% 0;
+}
+
+.layout main h1,
+.layout main h2,
+.layout main h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5% 0;
+}
+
+
+.layout main p {
+    line-height: 1.7;
+    text-align: left;
+    padding: 1.5% 0;
+    font-size: 1.2rem;
+}
+
+.layout .alex-link  {
+    color: var(--primary-color);
+}
+
+.dark-mode .layout .alex-link  {
+    color: var(--secondary-color);
+}
+/* Responsive Styles for Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .layout main {
+        margin: 0 20%;
+    }
+    
+    
+    
+    .layout main p {
+        padding: 1.5% 0 ;
+        font-size: 1.15rem;
+    }
+}
+
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .layout main {
+        margin: auto 12.5%;
+
+    }
+    .layout main p {
+
+        padding: 2% 0;
+        font-size: 1.15rem;
+    }
+    
+
+
+}
+
+
+/* phones */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .layout main {
+        margin: 2.5%;
+    }
+    .layout main h1,
+    .layout main h2,
+    .layout main h3 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 5% 0;
+    }
+    
+    
+    .layout main p {
+        padding: 2.5% 0 ;
+        font-size: 1.1rem;
+    }
+
+
+}   
+
+/* smaller phones */
+@media screen and (max-width: 320px) {
+    .layout main {
+        margin: 2.5%;
+    }
+    .layout main h1,
+    .layout main h2,
+    .layout main h3 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 5% 0;
+    }
+    
+    
+    .layout main p {
+        padding: 5% 0;
+        font-size: 1rem;
+
+    }
+
+} 
