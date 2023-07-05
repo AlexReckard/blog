@@ -10,6 +10,7 @@ imageCreditName: "Possessed Photography"
 readTime: "3"
 date: "2023-06-30"
 author: "John Doe"
+keywords: ["Artificial Intelligence", "AI", "Tech", "Technology", "Ethics"]
 ---
 
 Dipping our toes into the vast ocean of artificial intelligence (AI) feels a lot like taking a peek into a future that's ready and raring to revamp every facet of our existence. Ready to take a plunge? Let's dive head first into exploring the incredible possibilities that Artificial Intelligence has to offer. 🤖

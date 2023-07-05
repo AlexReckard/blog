@@ -9,12 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Blog Site`,
-    description: `A description of your blog`,
+    title: `For The Reckard`,
+    description: `Welcome to Alex Reckard's Blog called For The Reckard, where he writes on topics such as, but not limited to: technology, traveling, food, art, and shopping`,
     author: `Alex Reckard`,
     siteUrl: `https://blog.alexreckard.com`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

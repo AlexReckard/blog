@@ -7,13 +7,19 @@ import ArticleMeta from "../components/ArticlePage/articleMeta/articleMeta.js";
 import ArticleContent from "../components/ArticlePage/articleContent/articleContent.js";
 import Footer from '../components/Common/footer/footer.js';
 
+import Seo from "../components/Common/seo/seo.js";
+
 function ArticlePage({ data }) {
   const post = data.markdownRemark;
-//   const { title, date, category, image, alt, readTime, description, author, imageCredit } = post.frontmatter;
   const html = post.html;
 
   return (
     <div>
+      <Seo 
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        keywords={post.frontmatter.keywords}
+      />
       <Header />
       <ArticleHero article={post.frontmatter} />
       <ArticleMeta article={post.frontmatter} />
@@ -42,6 +48,7 @@ export const query = graphql`
             author
             imageCreditLink
             imageCreditName
+            keywords
         }
         }
     }

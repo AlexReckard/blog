@@ -24,6 +24,7 @@ const ArticleList = ({ category, skip = 0 }) => {
           readTime
           description
           author
+          keywords
         }
         id
       }
@@ -45,7 +46,8 @@ const allArticles = data.allMarkdownRemark.nodes
   imageCreditName: node.frontmatter.imageCreditName,
   readTime: node.frontmatter.readTime,
   date: node.frontmatter.date,
-  author: node.frontmatter.author
+  author: node.frontmatter.author,
+  keywords: node.frontmatter.keywords
 })).reverse();
 
 

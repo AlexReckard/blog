@@ -1,9 +1,17 @@
 import React from 'react'
 import Layout from '../components/Common/layout/layout'
+import Seo from '../components/Common/seo/seo'
 
 const AboutPage = () => {
     return (
+        
         <Layout>
+            <Seo 
+            title="About" 
+            description="Learn more about Alex Reckard, a software engineer with a passion for storytelling. Discover his journey from journalism to coding and his love for technology, travel, food, and more."
+            keywords={["Alex Reckard", "about", "software engineer", "journalism", "coding", "blog", "technology", "travel", "food", "art", "shopping"]}
+            />
+
         <h1>About</h1>
         <p>Hey there 🖐🏻, I'm <a href="https://alexreckard.com" className='alex-link'  target='_blank' rel='noopener noreferrer' aria-label="Alex Reckard's Site">Alex Reckard</a> and welcome to my blog! I'm a software engineer, but I didn't start out in tech. My journey's been a bit of a winding road.</p>
 

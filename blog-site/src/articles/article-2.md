@@ -10,6 +10,7 @@ imageCreditName: "Jon Tyson"
 readTime: "5"
 date: "2023-07-01"
 author: "Alex Reckard"
+keywords: ["Chicago Deep Dish Pizza", "Pizza", "Chicago", "Food", "Foodie"]
 ---
 
 

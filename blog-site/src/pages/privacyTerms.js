@@ -1,9 +1,16 @@
 import React from 'react'
 import Layout from '../components/Common/layout/layout'
+import Seo from '../components/Common/seo/seo'
 
 const PrivacyTermsPage = () => {
     return (
         <Layout>
+            <Seo 
+            title="Privacy and Terms" 
+            description="Learn about the privacy policy and terms of service for Alex Reckard's Blog. Understand how we handle your data, respect your privacy, and the rules for using the site."
+            keywords={["privacy policy", "terms of service", "Alex Reckard", "blog", "data", "privacy", "rules", "guidelines"]}
+            />
+
             <h1>Privacy & Terms</h1>
 
             <h2>Privacy Policy</h2>
