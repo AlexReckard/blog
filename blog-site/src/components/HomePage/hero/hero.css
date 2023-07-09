@@ -12,7 +12,7 @@
     grid-template-columns: 2fr 1fr; /* two columns: large one on left, small one on right */
     grid-template-rows: 1fr 1fr; /* two rows: for two small images */
     gap: 30px;
-    padding: 5% 12.5%;
+    padding: 2.5% 15% 2.5% 15%;
 }
 
 .hero-featured {
@@ -52,15 +52,20 @@
     cursor: pointer;
 }
 
-.hero-featured .text-overlay h2, .hero-small .text-overlay h3 {
+.hero-featured .text-overlay h2, .hero-small .text-overlay h2 {
     font-family: var(--bold-ff);
     margin: 0;
     max-width: 66%;
     text-align: left;
 }
 
+.hero-featured .text-overlay h2 {
+    font-size: 2rem;
+}
+
+
 .hero-small .text-overlay h2 {
-    max-width: 80%;
+    font-size: 1.1rem;
 }
 
 
@@ -106,22 +111,23 @@
     }
 
     .text-overlay h2 {
-        font-size: 1.25rem;
         padding: .5rem;
     }
-
-    .hero-small .text-overlay h3 {
-        max-width: 75%;
+    
+    .hero-featured .text-overlay h2 {
+        font-size: 1.5rem;
+    }
+    
+    
+    .hero-small .text-overlay h2 {
+        font-size: 1rem;
+        max-width: 70%;
     }
 
-    .text-overlay h3 {
+    .hero-featured .text-overlay p, .hero-small .text-overlay p {
         font-size: .9rem;
-        padding: .5rem;
     }
 
-    .hero-small .text-overlay p {
-        font-size: .7rem;
-    }
 }
 
 
@@ -139,24 +145,28 @@
     }
 
     .text-overlay h2 {
-        font-size: 1rem;
         padding: .5rem;
     }
 
-    .hero-small .text-overlay h3 {
-        max-width: 75%;
+    .hero-featured .text-overlay h2, .hero-small .text-overlay h2 {
+        max-width: 80%;
     }
 
-    .text-overlay h3 {
-        font-size: .9rem;
-        padding: .5rem;
+    .hero-featured .text-overlay h2 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-small .text-overlay h2 {
+        font-size: .8rem;
+        letter-spacing: .75px;
     }
 
-    .hero-small .text-overlay p {
+    .hero-featured .text-overlay p, .hero-small .text-overlay p {
         font-size: .7rem;
     }
 
 }
+
 
 
 /* phones */
@@ -182,21 +192,25 @@
     }
 
     .text-overlay h2 {
-        font-size: 1rem;
         padding: .5rem;
     }
 
-    .hero-small .text-overlay h3 {
+    .hero-featured .text-overlay h2, .hero-small .text-overlay h2 {
         max-width: 75%;
+        letter-spacing: .5px;
     }
 
-    .text-overlay h3 {
-        font-size: .9rem;
-        padding: .5rem;
+    .hero-featured .text-overlay h2 {
+        font-size: 1rem;
+        
+    }
+    
+    .hero-small .text-overlay h2 {
+        font-size: .85rem;
     }
 
-    .hero-small .text-overlay p {
-        font-size: .7rem;
+    .hero-featured .text-overlay p, .hero-small .text-overlay p {
+        font-size: .75rem;
     }
 
 }   
@@ -222,21 +236,25 @@
     }
 
     .text-overlay h2 {
-        font-size: 1rem;
         padding: .5rem;
     }
 
-    .hero-small .text-overlay h3 {
+    .hero-featured .text-overlay h2, .hero-small .text-overlay h2 {
         max-width: 75%;
+        letter-spacing: .5px;
     }
 
-    .text-overlay h3 {
-        font-size: .9rem;
-        padding: .5rem;
+    .hero-featured .text-overlay h2 {
+        font-size: 1rem;
+        
+    }
+    
+    .hero-small .text-overlay h2 {
+        font-size: .85rem;
     }
 
-    .hero-small .text-overlay p {
-        font-size: .7rem;
+    .hero-featured .text-overlay p, .hero-small .text-overlay p {
+        font-size: .75rem;
     }
 
 }

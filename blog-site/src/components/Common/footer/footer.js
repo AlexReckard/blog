@@ -15,7 +15,7 @@ const Footer = () => {
                     </form>
                 </div>
                 <div className="newsletter-disclaimer">
-                    <p>By subscribing, you agree to the <span><Link to="/privacyTerms">Terms of Use</Link></span> and <span><Link to="/privacyTerms">Privacy Policy</Link></span> & consent to receive periodic updates and promotional content from [Actual Company Name]. You can unsubscribe at any time. </p>
+                <p>By subscribing, you agree to the <span><Link to="/privacyTerms">Terms of Use</Link></span> and <span><Link to="/privacyTerms">Privacy Policy</Link></span> & consent to receive periodic updates and promotional content from For The Reckard via Mailchimp. You can unsubscribe at any time. </p>
                 </div>
             </div>
             <div className="footer-links-container">
@@ -32,6 +32,11 @@ const Footer = () => {
                     <li className="footer-social-item"><Link to="/#" aria-label="Visit our Instagram page">Instagram</Link></li>
                     <li className="footer-social-item"><Link to="/#" aria-label="Visit our Twitter page">Twitter</Link></li>
                 </ul>
+            </div>
+            <div className="footer-copyright-container">
+                <div className='footer-copyright'>
+                    <p>© 2023 For The Reckard. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>

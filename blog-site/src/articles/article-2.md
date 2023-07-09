@@ -1,7 +1,7 @@
 ---
 id: "2"
 category: "food"
-title: "Chicago's Best Pizza Spots"
+title: "Chicago's Best Deep Dish Pizza Spots"
 description: "Discover the tastiest pizza places in Chicago."
 image: "../images/pizza.png"
 alt: "Chicago Pizza"
